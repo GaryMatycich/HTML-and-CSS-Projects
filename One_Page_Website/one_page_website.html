@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="css/one_page_website.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+	<script src="./JS/one_page_website.js"></script>
 </head>
 
 <body>
@@ -41,119 +42,72 @@
 
 	<!-- GALLERY -->
 	<section>
-		<div id="gallery">
-			<h1>Gallery</h1>
-			<div>
-
-				<!-- PHOTO-CONTAINER 1 -->
-				<div>
-					<div>
-						<img src="./images/thumb/thumbnail_1.jpg" alt="hockey stuff">
-						<div>
-							<h3>Click to Enlarge</h3>
-							<p>Description of photo</p>
-						</div>
-					</div>
-				</div>
-				<!-- END PHOTO-CONTAINER 1 -->
-
-				<!-- PHOTO-CONTAINER 2 -->
-				<div>
-					<div>
-						<img src="./images/thumb/thumbnail_2.jpg" alt="hockey stuff">
-						<div>
-							<h3>Click to Enlarge</h3>
-							<p>Description of photo</p>
-						</div>
-					</div>
-				</div>
-				<!-- END PHOTO-CONTAINER 2 -->
-
-				<!-- PHOTO-CONTAINER 3 -->
-				<div>
-					<div>
-						<img src="./images/thumb/thumbnail_3.jpg" alt="hockey stuff">
-						<div>
-							<h3>Click to Enlarge</h3>
-							<p>Description of photo</p>
-						</div>
-					</div>
-				</div>
-				<!-- END PHOTO-CONTAINER 3 -->
-
-				<!-- PHOTO-CONTAINER 4 -->
-				<div>
-					<div>
-						<img src="./images/thumb/thumbnail_4.jpg" alt="hockey stuff">
-						<div>
-							<h3>Click to Enlarge</h3>
-							<p>Description of photo</p>
-						</div>
-					</div>
-				</div>
-				<!-- END PHOTO-CONTAINER 4 -->
-
-				<!-- PHOTO-CONTAINER 5 -->
-				<div>
-					<div>
-						<img src="./images/thumb/thumbnail_5.jpg" alt="hockey stuff">
-						<div>
-							<h3>Click to Enlarge</h3>
-							<p>Description of photo</p>
-						</div>
-					</div>
-				</div>
-				<!-- END PHOTO-CONTAINER 5 -->
-
-				<!-- PHOTO-CONTAINER 6 -->
-				<div>
-					<div>
-						<img src="./images/thumb/thumbnail_6.jpg" alt="hockey stuff">
-						<div>
-							<h3>Click to Enlarge</h3>
-							<p>Description of photo</p>
-						</div>
-					</div>
-				</div>
-				<!-- END PHOTO-CONTAINER 6 -->
-
-				<!-- PHOTO-CONTAINER 7 -->
-				<div>
-					<div>
-						<img src="./images/thumb/thumbnail_7.jpg" alt="hockey stuff">
-						<div>
-							<h3>Click to Enlarge</h3>
-							<p>Description of photo</p>
-						</div>
-					</div>
-				</div>
-				<!-- END PHOTO-CONTAINER 7 -->
-
-				<!-- PHOTO-CONTAINER 8 -->
-				<div>
-					<div>
-						<img src="./images/thumb/thumbnail_8.jpg" alt="hockey stuff">
-						<div>
-							<h3>Click to Enlarge</h3>
-							<p>Description of photo</p>
-						</div>
-					</div>
-				</div>
-				<!-- END PHOTO-CONTAINER 8 -->
-
-				<!-- PHOTO-CONTAINER 9 -->
-				<div>
-					<div>
-						<img src="./images/thumb/thumbnail_9.jpg" alt="hockey stuff">
-						<div>
-							<h3>Click to Enlarge</h3>
-							<p>Description of photo</p>
-						</div>
-					</div>
-				</div>
-				<!-- END PHOTO-CONTAINER 9 -->
+		<div class="row">
+			<div class="column">
+			  <img src="./images/thumb/thumbnail_1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
 			</div>
-		</div>
+			<div class="column">
+			  <img src="./images/thumb/thumbnail_2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+			</div>
+			<div class="column">
+			  <img src="./images/thumb/thumbnail_3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+			</div>
+			<div class="column">
+			  <img src="./images/thumb/thumbnail_4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+			</div>
+		  </div>
+<!-------------------------------------------------------------------------------------------------------------->
+		  <div id="myModal" class="modal">
+			<span class="close cursor" onclick="closeModal()">&times;</span>
+			<div class="modal-content">
+		  
+			  <div class="mySlides">
+				<div class="numbertext">1 / 9</div>
+				<img src="./images/Image_1.jpg" style="width:100%">
+			  </div>
+		  
+			  <div class="mySlides">
+				<div class="numbertext">2 / 9</div>
+				<img src="./images/image_2.jpg" style="width:100%">
+			  </div>
+		  
+			  <div class="mySlides">
+				<div class="numbertext">3 / 9</div>
+				<img src="./images/image_3.jpg" style="width:100%">
+			  </div>
+		  
+			  <div class="mySlides">
+				<div class="numbertext">4 / 9</div>
+				<img src="./images/image_4.jpg" style="width:100%">
+			  </div>
+		  
+			  <!-- Next/previous controls -->
+			  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+		  
+			  <!-- Caption text -->
+			  <div class="caption-container">
+				<p id="caption"></p>
+			  </div>
+		  
+			  <!-- Thumbnail image controls -->
+			  <div class="column">
+				<img class="demo" src="./images/thumb/thumbnail_1.jpg" onclick="currentSlide(1)" alt="hockey equipment">
+			  </div>
+		  
+			  <div class="column">
+				<img class="demo" src="./images/thumb/thumbnail_2.jpg" onclick="currentSlide(2)" alt="hockey equipment">
+			  </div>
+		  
+			  <div class="column">
+				<img class="demo" src="./images/thumb/thumbnail_3.jpg" onclick="currentSlide(3)" alt="hockey equipment">
+			  </div>
+		  
+			  <div class="column">
+				<img class="demo" src="./images/thumb/thumbnail_4.jpg" onclick="currentSlide(4)" alt="hockey equipment">
+			  </div>
+			</div>
+		  </div>
 	</section>
 	<!-- END GALLERY -->
 
