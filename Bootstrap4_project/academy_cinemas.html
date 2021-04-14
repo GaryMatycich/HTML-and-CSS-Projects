@@ -13,6 +13,8 @@
     <body>
         <div class="container">
 
+            <!------------------------------NAV BAR---------------------------------->
+
             <nav class="navbar navbar-expand-lg navbar-light bg-info">
             
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
@@ -42,7 +44,9 @@
                 </div>
             </div>
 
-            <!--------------ABOUT-------------------->
+            <!--------------------------------END NAV BAR-------------------------------------->
+
+            <!-----------------------------------ABOUT------------------------------------------>
 
             <div id="about" class="container">
                 <div class="row">
@@ -77,8 +81,11 @@
                 </div>
                 </div>
             </div>
-            <!-------------END ABOUT-------------------->
-            <!------------SHOWTIMES--------------------->
+
+            <!------------------------------------END ABOUT--------------------------------------->
+
+            <!------------------------------------SHOWTIMES--------------------------------------->
+
                 <div id="showtimes" class="container">
                     <h3>Showtimes!</h3>
                 <div class="row">
@@ -146,8 +153,22 @@
                     </div>
                 </div>
             </div>
-            <!------------END SHOWTIMES------------------>
-            <!----------------DEALS--------------------->
+
+            <!-----------------------------------END SHOWTIMES---------------------------------------->
+
+            <!----------------------------------JUMBOTRON HEADING-------------------------------------->
+
+            <div class="jumbotron jumbotron-fluid bg-info mt-5 text-center">
+                <div class = "container">
+                    <h1 class="display-4 hidden-sm-down" style="color:#fff; font-family: roboto; font-weight: 900; text-transform: uppercase;">Movie Deals</h1>
+                    <p class="lead">Check out our monthly deals...</p>
+                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#register">See our monthly movie deals!</button>
+                </div>
+            </div>
+
+            <!--------------------------------END JUMBOTRON HEADING------------------------------------>
+
+            <!---------------------------------------DEALS--------------------------------------------->
 
             <div id="deals" class="text-center">
                     <form>
@@ -155,10 +176,53 @@
                         <div class="form-group">
                             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="button" class="btn btn-secondary btn-info popover-dismiss" data-container="body" data-toggle="popover" data-placement="top" data-content="Submit your email to receive great movie reward deals!">Sign up!</button>
                     </form>
+                    <!----------------------- popover id added to help our jQuery target the button---------->
             </div>
 
+            <!------------------------------------- FORM MODAL----------------------------------------->
+
+            <div class="modal fade" id="register">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Register to recieve movie deals...</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            
+                        <form>
+                            <fieldset class="form-group row">
+                                <label for="firstname">First Name:</label>
+                                <input type="text" class="form-control" id="firstname" placeholder="First Name...">
+                            </fieldset>
+                            <fieldset class="form-group row">
+                                <label for="lastname">Last Name:</label>
+                                <input type="text" class="form-control" id="lastname" placeholder="Last Name...">
+                            </fieldset>
+                            <fieldset class="form-group row">
+                                <label for="email">Email:</label>
+                                <input type="text" class="form-control" id="email" placeholder="Email...">
+                            </fieldset>
+                            <fieldset class="form-group row">
+                                <label for="password">Password:</label>
+                                <input type="text" class="form-control" id="password" placeholder="Password...">
+                            </fieldset>
+                        </form>
+                        <!----------- using the "fieldset" to control our form with bootstrap------------------->
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-------------------------------------END FORM MODAL---------------------------------------------->
             <div class="container my-5">
                 <ul class="nav nav-inline">
                     <li class="nav-item">
@@ -172,10 +236,7 @@
                     </li>
                 </ul>
             </div>
-            <!----------------END DEALS--------------------->
-
-
-
+            <!----------------------------------------END DEALS--------------------------------------------------->
 
 
 
@@ -186,5 +247,12 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script>
+            $('.popover-dismiss').popover({
+                trigger: 'focus'
+            })
+        </script>
+        <!--------------- jQuery script added to give our submit button a popover function------------->
+
     </body>
 </html>
